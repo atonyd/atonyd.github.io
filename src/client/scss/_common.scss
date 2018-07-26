@@ -1,0 +1,33 @@
+.container-h-center {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+
+	&>div {
+		flex: auto;
+	}
+	.center {
+		flex: 1 1 auto;
+	}
+	@media screen and (max-width: 400px) {
+		.center {
+			flex: 1 1 300px;
+		}
+	}
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.btn:focus {
+	outline: none;
+}

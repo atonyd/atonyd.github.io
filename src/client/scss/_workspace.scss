@@ -1,0 +1,18 @@
+@import 'mixins';
+
+// workspace (ws)
+.ws {
+	@include full-size();
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		height: 60px;
+		background-color: black;
+		color: white;
+	}
+
+	&__main {
+		flex: 1;
+	}
+}

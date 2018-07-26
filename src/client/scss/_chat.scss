@@ -1,0 +1,127 @@
+@import 'mixins';
+
+.chat {
+	@include full-size();
+	display: flex;
+	flex-direction: column;
+
+	&__dialog {
+		flex: 1;
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		height: 400px;
+		margin-bottom: 10px;
+	}
+
+	&__messages {
+		flex: 1;
+	}
+
+	&__message {
+		padding: 5px 0;
+		margin: 10px 0;
+		position: relative;
+		display: inline-block;
+
+		.avatar {
+			width: 45px;
+			height: 45px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include shadow(10px 14px 14px -4px rgba(71, 71, 71, 0.25));
+		}
+
+		.username {
+			position: absolute;
+			left: 60px;
+			top: 2px;
+			font-weight: 200;
+			letter-spacing: 1px;
+			color: white;
+		}
+
+		.msg-body {
+			margin: 20px 0 0 20px;
+			padding: 20px 15px 15px 40px;
+			background-color: white;
+			line-height: 1.7rem;
+			@include shadow(10px 14px 14px -4px rgba(71, 71, 71, 0.25));
+		}
+
+		.msg-footer {
+			margin: 0 0 0 20px;
+			padding: 5px 15px 15px 40px;
+			background-color: white;
+			@include secondary-text();
+			color: chocolate;
+			font-weight: 200;
+			font-size: .8rem;
+			@include shadow(10px 14px 18px -4px rgba(71, 71, 71, 0.25));
+		}
+	}
+
+	.av-1 {
+		@include avatar('avatars/av-1.png');
+	}
+
+	.av-2 {
+		@include avatar('avatars/av-2.png');
+	}
+
+	.av-3 {
+		@include avatar('avatars/av-3.png');
+	}
+
+	.av-none {
+		@include avatar('avatars/av-none.png');
+		border-radius: 50%;
+	}
+
+	&__input {
+		min-height: 3.4rem;
+		max-height: 8.4rem;
+		color: white;
+		display: flex;
+		align-items: center;
+		padding-bottom: 5px;
+
+		textarea {
+			resize: none;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: none;
+			color: white;
+			outline: none;
+			padding: 0;
+			font-weight: 100;
+		}
+
+		button.chat__send {
+			@include secondary-text();
+		}
+	}
+
+	&__input-msg {
+		flex: 1;
+		padding-left: 20px;
+		overflow-y: scroll;
+	}
+
+	&__input-menu {
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+
+		&>div {
+			font-weight: 800;
+			padding-bottom: 8px;
+		}
+		&>* {
+			margin: 0 10px;
+		}
+	}
+}

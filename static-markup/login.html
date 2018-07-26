@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>chat</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script>
+</head>
+<body>
+	<div class="layout">
+		<div class="bg bg-1">
+				<div class="bg-overlay"></div>
+				<div class="bg-overlay-footer"></div>
+		</div>
+		<div class="container-h-center">
+			<div></div>
+			<div id="login-page" class="center flex-col">
+				<header>
+					<div class="logo">
+							<div class="title"><h1>Chat</h1></div>
+					</div>
+				</header>
+				<main>
+					<form>
+						<div class="controls">
+							<div class="control">
+								<div class="control__label">USERNAME</div>
+								<div class="control__field">
+									<input type="text" name="username" id="username">
+								</div>
+							</div>
+							<div class="control">
+									<div class="control__label">PASSWORD</div>
+									<div class="control__field">
+										<input type="password" name="password" id="password">
+									</div>
+							</div>
+						</div>
+						<div class="actions">
+							<button type="submit" id="login-submit">
+									<span>Get started</span>
+									<!-- <i class="fas fa-play"></i> -->
+									<span>&#9658;</span>
+							</button>
+						</div>
+					</form>
+				</main>
+				<footer>
+					<div>
+							Not registered? <a href="#">Create Account</a>
+					</div>
+				</footer>
+			</div>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>

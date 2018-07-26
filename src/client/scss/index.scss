@@ -1,0 +1,19 @@
+@import 'mixins';
+@import 'common';
+@import 'bg';
+@import 'workspace';
+@import 'login';
+@import 'chat';
+@import 'chatnav';
+
+html, body {
+	font-family: 'Roboto';
+	font-weight: 200;
+	font-size: 14px;
+	@include full-size();
+	overflow: hidden;
+}
+
+.layout {
+	@include full-size();
+}

@@ -1,0 +1,113 @@
+@import 'mixins';
+@import 'vars';
+
+#login-page {
+	max-width: 500px;
+
+	header {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.logo {
+			background: url('img/chat-logo.svg');
+			background-size: cover;
+			width: 180px;
+			height: 180px;
+			display: flex;
+			justify-content: center;
+
+			.title {
+				margin-top: auto;
+
+				&>h1 {
+					letter-spacing: 2px;
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
+
+	main {
+		flex: 1.5;
+		background-color: white;
+		min-height: 180px;
+
+		form {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+
+			.controls {
+				padding: 10px 30px;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+
+				.control {
+					border-bottom: 1px solid rgba(0, 0, 0, .5);
+					padding-bottom: 5px;
+
+					&__label {
+						color: #B49190;
+						letter-spacing: 2px;
+						font-size: .8rem;
+					}
+					&__field {
+						margin-top: 10px;
+						input {
+							outline: none;
+							border: none;
+							width: 100%;
+							// border-bottom: 1px solid rgba(0, 0, 0, .5);
+						}
+					}
+				}
+			}
+
+			.actions {
+				margin-top: auto;
+				height: 5rem;
+				padding: 0 30px;
+				background-color: $overlayColor;
+				transition: background-color 1s;
+
+				button {
+					cursor: pointer;
+					padding: 0;
+					background-color: transparent;
+					border: none;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				button:focus {
+					outline: none;
+				}
+
+				&.acted {
+					background-color: lightgreen;
+				}
+			}
+		}
+	}
+
+	footer {
+		min-height: 40px;
+		flex: .5;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include footer-text();
+
+		a {
+			color: $overlayColor;
+		}
+	}
+}
